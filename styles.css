@@ -1,0 +1,116 @@
+/* =========================
+	Resets & Pre Designs 
+   =========================
+*/
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+
+html {
+	box-sizing: border-box;
+	font-size: 62.5%; /* 1rem = 10px */
+}
+
+@media (max-width: 43.75em) {
+	html {
+		font-size: 50%;
+	}
+}
+
+body {
+	font-family: 'Lato', sans-serif;
+}
+
+/* =========================
+	LAYOUT
+   =========================
+*/
+
+.container {
+	display: grid;
+	grid-template-rows: 100vh repeat(4, min-content) 100vh repeat(3, min-content);
+	grid-template-columns: [full-start]repeat(10, [col-start] 1fr [col-end])[full-end];
+}
+
+@media (max-width: 59.375em) {
+	/*.why-us-picture {
+		grid-column: full-start/full-end;
+	}
+
+	.why-us-description {
+		grid-column: full-start/full-end;
+	}*/	
+
+	.container {
+		grid-template-rows: 100vh repeat(4, min-content) min-content 60vh repeat(3, min-content);
+	}
+}
+
+/* =========================
+	TYPOGRAPHY
+   =========================
+*/
+
+.heading-1 {
+	font-size: 4.8rem;
+	font-weight: 900;
+}
+
+.heading-2 {
+	font-size: 3.2rem;
+	font-weight: 900;
+}
+
+.heading-3 {
+	font-size: 2.2rem;
+	font-weight: 400;
+}
+
+/* =========================
+	Reusable Contents
+   =========================
+*/
+
+.heading-2-custom {
+	color: #00918e;
+	text-align: center;
+	margin-bottom: 1rem;
+}
+
+.heading-2-again:after {
+	content: " ";
+	display: block;
+	width: 9rem;
+	height: .3rem;
+	background: #00918e;
+	margin: 1.6rem auto;
+}
+
+.lead-line {
+	color: #808080;
+	text-align: center;
+	line-height: 1.5;
+	width: 55%;
+	margin: 0 auto;
+	font-size: 1.6rem;
+}
+
+.lead-line::after {
+	content: " ";
+	display: block;
+	width: 9rem;
+	height: .3rem;
+	background: #00918e;
+	margin: 1.6rem auto;
+	margin-bottom: 6rem;
+}
+
+
+
+
+
+
